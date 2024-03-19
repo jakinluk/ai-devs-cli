@@ -4,6 +4,7 @@
   "description": "Unofficial CLI AI_Devs tasks",
   "author": "Łukasz Kiedrowski",
   "scripts": {
+    "lint": "npx eslint -- .",
     "postinstall": "npx mkdirp tasks",
     "get-task": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks get-task",
     "helloapi": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks helloapi"
@@ -38,7 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^5.25.0",
     "@typescript-eslint/parser": "^5.25.0",
     "esbuild": "^0.15.12",
-    "eslint": "^8.27.0",
+    "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
