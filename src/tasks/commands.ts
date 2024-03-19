@@ -1,4 +1,4 @@
-import { BaseTaskCommand } from '../core';
+import { BaseTaskCommand } from '../core/handler/baseTaskCommand';
 
 /* eslint-disable @typescript-eslint/no-empty-interface */
 export interface GetTaskCommand {

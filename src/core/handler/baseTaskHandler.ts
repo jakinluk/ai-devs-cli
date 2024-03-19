@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import chalk from 'chalk';
-import { Answer, SubmitAnswerResponse, Task, TaskDevClient } from '../tasks/services/taskDevClient';
+import { Answer, SubmitAnswerResponse, Task, TaskDevClient } from '../clients/taskDevClient';
 import { BaseTaskCommand } from './baseTaskCommand';
 
 export abstract class BaseTaskHandler<C extends BaseTaskCommand, T extends Task, A extends Answer> {

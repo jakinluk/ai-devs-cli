@@ -3,8 +3,8 @@
 /* eslint-disable max-classes-per-file */
 import { SolveHelloApiCommand } from '../commands';
 import * as config from '../config';
-import { TaskDevClientProvider } from '../services/taskDevClient';
-import { BaseTaskHandler } from '../../core';
+import { TaskDevClientProvider } from '../../core/clients/taskDevClient';
+import { BaseTaskHandler } from '../../core/handler/baseTaskHandler';
 
 const TASK_NAME = 'helloapi';
 

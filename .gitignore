@@ -131,4 +131,4 @@ dist
 
 .build/
 .vscode/
-tasks/
+./tasks/

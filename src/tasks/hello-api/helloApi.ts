@@ -4,9 +4,9 @@ import { SolveHelloApiCommand } from '../commands';
 import { SolveHelloApiCommandHandlerProvider } from './helloApiHandler';
 
 export function buildSolveHelloApiCommand(yargs: Argv) {
-  return yargs.option('dry', {
+  return yargs.option('dummy', {
     type: 'boolean',
-    description: 'save the task to file on local',
+    description: 'parametrize me!',
     demandOption: false,
     default: false,
   });
@@ -18,7 +18,7 @@ async function promptForMissingParams(input: Partial<SolveHelloApiCommand>): Pro
   const { dry } = await prompt(
     [
       {
-        name: 'dry',
+        name: 'dummy',
         type: 'boolean',
         required: false,
       },

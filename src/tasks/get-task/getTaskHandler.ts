@@ -5,8 +5,8 @@ import fs from 'fs';
 import chalk from 'chalk';
 import { GetTaskCommand } from '../commands';
 import * as config from '../config';
-import { TaskDevClient, TaskDevClientProvider } from '../services/taskDevClient';
 import configstore from '../configstore';
+import { TaskDevClient, TaskDevClientProvider } from '../../core/clients/taskDevClient';
 
 export class GetTaskHandlerProvider {
   async provide(): Promise<GetTaskHandler> {
