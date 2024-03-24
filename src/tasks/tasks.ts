@@ -1,8 +1,9 @@
 import { Argv } from 'yargs';
-import { GetTaskCommand, SolveHelloApiCommand, SolveModerationCommand } from './commands';
+import { GetTaskCommand, SolveBloggerCommand, SolveHelloApiCommand, SolveModerationCommand } from './commands';
 import { buildGetTaskCommand, getTask } from './get-task/getTask';
 import { buildSolveHelloApiCommand, helloApi } from './hello-api/helloApi';
 import { buildSolveModerationCommand, moderation } from './moderation/moderation';
+import { blogger, buildSolveBloggerCommand } from './blogger/blogger';
 
 export function tasksCommandBuilder(yargs: Argv) {
   return yargs
@@ -24,5 +25,11 @@ export function tasksCommandBuilder(yargs: Argv) {
       'solve moderation task',
       (yargs) => buildSolveModerationCommand(yargs),
       (args) => moderation(args as Partial<SolveModerationCommand>)
+    )
+    .command(
+      'blogger',
+      'solve blogger task',
+      (yargs) => buildSolveBloggerCommand(yargs),
+      (args) => blogger(args as Partial<SolveBloggerCommand>)
     );
 }

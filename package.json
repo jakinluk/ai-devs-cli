@@ -8,9 +8,11 @@
     "postinstall": "npx mkdirp tasks",
     "get-task": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks get-task",
     "helloapi": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks helloapi",
-    "moderation": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks moderation"
+    "moderation": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks moderation",
+    "blogger": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks blogger"
   },
   "dependencies": {
+    "@langchain/openai": "^0.0.23",
     "axios": "^1.4.0",
     "chalk": "^4.1.2",
     "configstore": "^6.0.0",
@@ -19,6 +21,7 @@
     "inquirer": "^9.2.14",
     "json-diff-ts": "^2.2.1",
     "jsonpath": "^1.1.1",
+    "langchain": "^0.1.28",
     "loadsh": "^0.0.4",
     "mkdirp": "^3.0.1",
     "node-fetch": "^2.6.11",
