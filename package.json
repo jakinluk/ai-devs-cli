@@ -7,7 +7,8 @@
     "lint": "npx eslint -- .",
     "postinstall": "npx mkdirp tasks",
     "get-task": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks get-task",
-    "helloapi": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks helloapi"
+    "helloapi": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks helloapi",
+    "moderation": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks moderation"
   },
   "dependencies": {
     "axios": "^1.4.0",
@@ -21,6 +22,7 @@
     "loadsh": "^0.0.4",
     "mkdirp": "^3.0.1",
     "node-fetch": "^2.6.11",
+    "openai": "^4.29.2",
     "p-limit": "^3.1.0",
     "p-map": "^4.0.0",
     "p-timeout": "^4.1.0",

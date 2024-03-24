@@ -7,3 +7,5 @@ export interface GetTaskCommand {
 }
 
 export interface SolveHelloApiCommand extends BaseTaskCommand {}
+
+export interface SolveModerationCommand extends BaseTaskCommand {}

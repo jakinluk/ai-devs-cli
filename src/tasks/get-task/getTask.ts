@@ -3,7 +3,7 @@ import { Argv } from 'yargs';
 import { GetTaskCommand } from '../commands';
 import { GetTaskHandlerProvider } from './getTaskHandler';
 
-const TASKS = ['helloapi'];
+const TASKS = ['helloapi', 'maxtokens', 'moderation'];
 
 export function buildGetTaskCommand(yargs: Argv) {
   return yargs

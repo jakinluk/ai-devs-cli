@@ -1,7 +1,8 @@
 import { Argv } from 'yargs';
-import { GetTaskCommand, SolveHelloApiCommand } from './commands';
+import { GetTaskCommand, SolveHelloApiCommand, SolveModerationCommand } from './commands';
 import { buildGetTaskCommand, getTask } from './get-task/getTask';
 import { buildSolveHelloApiCommand, helloApi } from './hello-api/helloApi';
+import { buildSolveModerationCommand, moderation } from './moderation/moderation';
 
 export function tasksCommandBuilder(yargs: Argv) {
   return yargs
@@ -17,5 +18,11 @@ export function tasksCommandBuilder(yargs: Argv) {
       'solve helloapi task',
       (yargs) => buildSolveHelloApiCommand(yargs),
       (args) => helloApi(args as Partial<SolveHelloApiCommand>)
+    )
+    .command(
+      'moderation',
+      'solve moderation task',
+      (yargs) => buildSolveModerationCommand(yargs),
+      (args) => moderation(args as Partial<SolveModerationCommand>)
     );
 }

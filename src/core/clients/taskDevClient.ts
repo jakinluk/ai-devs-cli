@@ -8,7 +8,7 @@ import axios, { AxiosInstance } from 'axios';
 export type Task = Record<string, unknown>;
 
 export interface Answer {
-  answer: string | number | boolean | Record<string, unknown>;
+  answer: string | number | boolean | Record<string, unknown> | Array<string | number | boolean>;
 }
 
 export interface Result {
