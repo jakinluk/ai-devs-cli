@@ -1,0 +1,7 @@
+{
+  "code": 0,
+  "msg": "send me any question in english, and I will try to answer it in max 150 tokens",
+  "hint1": "please send your question in 'question' field to /task/ endpoint (simple form, not JSON)",
+  "hint2": "sometimes I don't tell the truth",
+  "hint3": "Send to /answer/ info if I'm telling the truth. Just value: YES/NO"
+}

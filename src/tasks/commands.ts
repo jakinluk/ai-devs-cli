@@ -11,3 +11,7 @@ export interface SolveHelloApiCommand extends BaseTaskCommand {}
 export interface SolveModerationCommand extends BaseTaskCommand {}
 
 export interface SolveBloggerCommand extends BaseTaskCommand {}
+
+export interface SolveLiarCommand extends BaseTaskCommand {
+  question: string;
+}

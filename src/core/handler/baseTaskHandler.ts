@@ -4,9 +4,9 @@ import { Answer, SubmitAnswerResponse, Task, TaskDevClient } from '../clients/ta
 import { BaseTaskCommand } from './baseTaskCommand';
 
 export abstract class BaseTaskHandler<C extends BaseTaskCommand, T extends Task, A extends Answer> {
-  private activeToken: string;
+  protected activeToken: string;
 
-  constructor(private readonly taskDevClient: TaskDevClient, private readonly taskName: string) {}
+  constructor(protected readonly taskDevClient: TaskDevClient, private readonly taskName: string) {}
 
   async handle(command: C): Promise<void> {
     const task = await this.getTask(this.taskName);

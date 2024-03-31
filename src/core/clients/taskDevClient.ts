@@ -115,6 +115,23 @@ export class TaskDevClient {
     }
   }
 
+  async submitFromData(input: { token: string }, data: Record<string, unknown>): Promise<Record<string, unknown>> {
+    try {
+      const fromData = new FormData();
+      Object.entries(data).forEach(([key, value]) => {
+        fromData.append(key, value);
+      });
+      const headers = {
+        'Content-Type': 'multipart/form-data',
+      };
+      const resp = await this.client.post<Record<string, unknown>>(`/task/${input.token}`, fromData, { headers });
+      return resp.data;
+    } catch (error) {
+      this.printErrorDetails(error);
+      throw error;
+    }
+  }
+
   private printErrorDetails(error: any) {
     if (error.response) {
       console.log(error.response.data);

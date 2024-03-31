@@ -1,9 +1,16 @@
 import { Argv } from 'yargs';
-import { GetTaskCommand, SolveBloggerCommand, SolveHelloApiCommand, SolveModerationCommand } from './commands';
+import {
+  GetTaskCommand,
+  SolveBloggerCommand,
+  SolveHelloApiCommand,
+  SolveLiarCommand,
+  SolveModerationCommand,
+} from './commands';
 import { buildGetTaskCommand, getTask } from './get-task/getTask';
 import { buildSolveHelloApiCommand, helloApi } from './hello-api/helloApi';
 import { buildSolveModerationCommand, moderation } from './moderation/moderation';
 import { blogger, buildSolveBloggerCommand } from './blogger/blogger';
+import { buildSolveLiarCommand, liar } from './liar/liar';
 
 export function tasksCommandBuilder(yargs: Argv) {
   return yargs
@@ -31,5 +38,11 @@ export function tasksCommandBuilder(yargs: Argv) {
       'solve blogger task',
       (yargs) => buildSolveBloggerCommand(yargs),
       (args) => blogger(args as Partial<SolveBloggerCommand>)
+    )
+    .command(
+      'liar',
+      'solve liar task',
+      (yargs) => buildSolveLiarCommand(yargs),
+      (args) => liar(args as Partial<SolveLiarCommand>)
     );
 }
