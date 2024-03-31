@@ -2,7 +2,7 @@
 /* eslint-disable no-console */
 /* eslint-disable no-use-before-define */
 /* eslint-disable max-classes-per-file */
-import { ChatOpenAI } from 'langchain/chat_models/openai';
+import { ChatOpenAI } from '@langchain/openai';
 import { ChatPromptTemplate } from 'langchain/prompts';
 import { SolveBloggerCommand } from '../commands';
 import * as config from '../config';
