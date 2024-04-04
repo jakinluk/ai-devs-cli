@@ -4,7 +4,6 @@
 /* eslint-disable max-classes-per-file */
 import { PromptTemplate } from 'langchain/prompts';
 import { LLMChain } from 'langchain/chains';
-import { Chat } from 'openai/resources';
 import { ChatOpenAI } from '@langchain/openai';
 import { SolveLiarCommand } from '../commands';
 import * as config from '../config';

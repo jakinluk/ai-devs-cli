@@ -3,6 +3,7 @@ import {
   GetTaskCommand,
   SolveBloggerCommand,
   SolveHelloApiCommand,
+  SolveInpromptCommand,
   SolveLiarCommand,
   SolveModerationCommand,
 } from './commands';
@@ -11,6 +12,7 @@ import { buildSolveHelloApiCommand, helloApi } from './hello-api/helloApi';
 import { buildSolveModerationCommand, moderation } from './moderation/moderation';
 import { blogger, buildSolveBloggerCommand } from './blogger/blogger';
 import { buildSolveLiarCommand, liar } from './liar/liar';
+import { buildSolveInpromptApiCommand, inpromptApi } from './inprompt/inprompt';
 
 export function tasksCommandBuilder(yargs: Argv) {
   return yargs
@@ -44,5 +46,11 @@ export function tasksCommandBuilder(yargs: Argv) {
       'solve liar task',
       (yargs) => buildSolveLiarCommand(yargs),
       (args) => liar(args as Partial<SolveLiarCommand>)
+    )
+    .command(
+      'inprompt',
+      'solve inprompt task',
+      (yargs) => buildSolveInpromptApiCommand(yargs),
+      (args) => inpromptApi(args as Partial<SolveInpromptCommand>)
     );
 }
