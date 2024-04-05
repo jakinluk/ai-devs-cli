@@ -2,6 +2,7 @@ import { Argv } from 'yargs';
 import {
   GetTaskCommand,
   SolveBloggerCommand,
+  SolveEmbeddingCommand,
   SolveHelloApiCommand,
   SolveInpromptCommand,
   SolveLiarCommand,
@@ -13,6 +14,7 @@ import { buildSolveModerationCommand, moderation } from './moderation/moderation
 import { blogger, buildSolveBloggerCommand } from './blogger/blogger';
 import { buildSolveLiarCommand, liar } from './liar/liar';
 import { buildSolveInpromptApiCommand, inpromptApi } from './inprompt/inprompt';
+import { buildSolveEmbeddingApiCommand, embeddingApi } from './embedding/embedding';
 
 export function tasksCommandBuilder(yargs: Argv) {
   return yargs
@@ -52,5 +54,11 @@ export function tasksCommandBuilder(yargs: Argv) {
       'solve inprompt task',
       (yargs) => buildSolveInpromptApiCommand(yargs),
       (args) => inpromptApi(args as Partial<SolveInpromptCommand>)
+    )
+    .command(
+      'embedding',
+      'solve embedding task',
+      (yargs) => buildSolveEmbeddingApiCommand(yargs),
+      (args) => embeddingApi(args as Partial<SolveEmbeddingCommand>)
     );
 }

@@ -8,6 +8,8 @@ export interface GetTaskCommand {
 
 export interface SolveHelloApiCommand extends BaseTaskCommand {}
 
+export interface SolveEmbeddingCommand extends BaseTaskCommand {}
+
 export interface SolveInpromptCommand extends BaseTaskCommand {}
 
 export interface SolveModerationCommand extends BaseTaskCommand {}

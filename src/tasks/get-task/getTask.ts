@@ -3,7 +3,7 @@ import { Argv } from 'yargs';
 import { GetTaskCommand } from '../commands';
 import { GetTaskHandlerProvider } from './getTaskHandler';
 
-const TASKS = ['helloapi', 'maxtokens', 'moderation', 'blogger', 'liar', 'inprompt'];
+const TASKS = ['helloapi', 'maxtokens', 'moderation', 'blogger', 'liar', 'inprompt', 'embedding'];
 
 export function buildGetTaskCommand(yargs: Argv) {
   return yargs
