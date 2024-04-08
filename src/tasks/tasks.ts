@@ -7,6 +7,7 @@ import {
   SolveInpromptCommand,
   SolveLiarCommand,
   SolveModerationCommand,
+  SolveWhisperCommand,
 } from './commands';
 import { buildGetTaskCommand, getTask } from './get-task/getTask';
 import { buildSolveHelloApiCommand, helloApi } from './hello-api/helloApi';
@@ -15,6 +16,7 @@ import { blogger, buildSolveBloggerCommand } from './blogger/blogger';
 import { buildSolveLiarCommand, liar } from './liar/liar';
 import { buildSolveInpromptApiCommand, inpromptApi } from './inprompt/inprompt';
 import { buildSolveEmbeddingApiCommand, embeddingApi } from './embedding/embedding';
+import { buildSolveWhisperApiCommand, whisperApi } from './whisper/whisper';
 
 export function tasksCommandBuilder(yargs: Argv) {
   return yargs
@@ -60,5 +62,11 @@ export function tasksCommandBuilder(yargs: Argv) {
       'solve embedding task',
       (yargs) => buildSolveEmbeddingApiCommand(yargs),
       (args) => embeddingApi(args as Partial<SolveEmbeddingCommand>)
+    )
+    .command(
+      'whisper',
+      'solve whisper task',
+      (yargs) => buildSolveWhisperApiCommand(yargs),
+      (args) => whisperApi(args as Partial<SolveWhisperCommand>)
     );
 }

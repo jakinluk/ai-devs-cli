@@ -19,3 +19,5 @@ export interface SolveBloggerCommand extends BaseTaskCommand {}
 export interface SolveLiarCommand extends BaseTaskCommand {
   question: string;
 }
+
+export interface SolveWhisperCommand extends BaseTaskCommand {}
