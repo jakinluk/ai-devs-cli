@@ -1,0 +1,5 @@
+{
+  "code": 0,
+  "msg": "send me definition of function named addUser that require 3 params: name (string), surname (string) and year of birth in field named \"year\" (integer). Set type of function to \"object\"",
+  "hint1": "send this definition as correct JSON structure inside 'answer' field (as usual)"
+}

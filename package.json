@@ -13,7 +13,8 @@
     "liar": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks liar",
     "inprompt": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks inprompt",
     "embedding": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks embedding",
-    "whisper": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks whisper"
+    "whisper": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks whisper",
+    "functions": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks functions"
   },
   "dependencies": {
     "@langchain/openai": "^0.0.25",
