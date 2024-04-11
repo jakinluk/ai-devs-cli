@@ -9,14 +9,18 @@ export abstract class BaseTaskHandler<C extends BaseTaskCommand, T extends Task,
   constructor(protected readonly taskDevClient: TaskDevClient, private readonly taskName: string) {}
 
   async handle(command: C): Promise<void> {
-    const task = await this.getTask(this.taskName);
-    console.log(chalk.green(`Obtained task \n${JSON.stringify(task, null, 2)}`));
+    try {
+      const task = await this.getTask(this.taskName);
+      console.log(chalk.green(`Obtained task \n${JSON.stringify(task, null, 2)}`));
 
-    const answer = await this.solve(command, task);
-    console.log(chalk.green(`Solution \n${JSON.stringify(answer, null, 2)}`));
+      const answer = await this.solve(command, task);
+      console.log(chalk.green(`Solution \n${JSON.stringify(answer, null, 2)}`));
 
-    const finalResult = await this.putAnswer(answer);
-    this.printAnswer(finalResult);
+      const finalResult = await this.putAnswer(answer);
+      this.printAnswer(finalResult);
+    } catch (error) {
+      console.log(chalk.red(`Error: ${error}`));
+    }
   }
 
   abstract solve(command: C, task: T): Promise<A>;

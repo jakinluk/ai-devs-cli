@@ -13,6 +13,7 @@ const TASKS = [
   'embedding',
   'whisper',
   'functions',
+  'rodo',
 ];
 
 export function buildGetTaskCommand(yargs: Argv) {

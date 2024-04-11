@@ -8,6 +8,7 @@ import {
   SolveInpromptCommand,
   SolveLiarCommand,
   SolveModerationCommand,
+  SolveRodoCommand,
   SolveWhisperCommand,
 } from './commands';
 import { buildGetTaskCommand, getTask } from './get-task/getTask';
@@ -19,6 +20,7 @@ import { buildSolveInpromptApiCommand, inpromptApi } from './inprompt/inprompt';
 import { buildSolveEmbeddingApiCommand, embeddingApi } from './embedding/embedding';
 import { buildSolveWhisperApiCommand, whisperApi } from './whisper/whisper';
 import { functionsApi } from './functions-api/functionsApi';
+import { rodo } from './rodo/rodo';
 
 export function tasksCommandBuilder(yargs: Argv) {
   return yargs
@@ -71,5 +73,6 @@ export function tasksCommandBuilder(yargs: Argv) {
       (yargs) => buildSolveWhisperApiCommand(yargs),
       (args) => whisperApi(args as Partial<SolveWhisperCommand>)
     )
-    .command('functions', 'solve functions task', (args) => functionsApi(args as unknown as SolveFunctionsApiCommand));
+    .command('functions', 'solve functions task', (args) => functionsApi(args as unknown as SolveFunctionsApiCommand))
+    .command('rodo', 'solve rodo task', (args) => rodo(args as unknown as SolveRodoCommand));
 }
