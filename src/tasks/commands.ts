@@ -23,3 +23,5 @@ export interface SolveLiarCommand extends BaseTaskCommand {
 export interface SolveWhisperCommand extends BaseTaskCommand {}
 export interface SolveFunctionsApiCommand extends BaseTaskCommand {}
 export interface SolveRodoCommand extends BaseTaskCommand {}
+
+export interface SolveScraperCommand extends BaseTaskCommand {}

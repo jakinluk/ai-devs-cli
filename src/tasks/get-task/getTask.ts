@@ -14,6 +14,7 @@ const TASKS = [
   'whisper',
   'functions',
   'rodo',
+  'scraper',
 ];
 
 export function buildGetTaskCommand(yargs: Argv) {

@@ -9,6 +9,7 @@ import {
   SolveLiarCommand,
   SolveModerationCommand,
   SolveRodoCommand,
+  SolveScraperCommand,
   SolveWhisperCommand,
 } from './commands';
 import { buildGetTaskCommand, getTask } from './get-task/getTask';
@@ -21,6 +22,7 @@ import { buildSolveEmbeddingApiCommand, embeddingApi } from './embedding/embeddi
 import { buildSolveWhisperApiCommand, whisperApi } from './whisper/whisper';
 import { functionsApi } from './functions-api/functionsApi';
 import { rodo } from './rodo/rodo';
+import { scraper } from './scraper/scraper';
 
 export function tasksCommandBuilder(yargs: Argv) {
   return yargs
@@ -74,5 +76,6 @@ export function tasksCommandBuilder(yargs: Argv) {
       (args) => whisperApi(args as Partial<SolveWhisperCommand>)
     )
     .command('functions', 'solve functions task', (args) => functionsApi(args as unknown as SolveFunctionsApiCommand))
-    .command('rodo', 'solve rodo task', (args) => rodo(args as unknown as SolveRodoCommand));
+    .command('rodo', 'solve rodo task', (args) => rodo(args as unknown as SolveRodoCommand))
+    .command('scraper', 'solve scraper task', (args) => scraper(args as unknown as SolveScraperCommand));
 }
