@@ -25,7 +25,7 @@ export abstract class BaseTaskHandler<C extends BaseTaskCommand, T extends Task,
 
   abstract solve(command: C, task: T): Promise<A>;
 
-  private async getTask(taskName: string): Promise<T> {
+  protected async getTask(taskName: string): Promise<T> {
     const tokenResponse = await this.taskDevClient.getToken({ taskName });
     this.activeToken = tokenResponse.token;
     return (await this.taskDevClient.getTask({ token: tokenResponse.token })) as T;

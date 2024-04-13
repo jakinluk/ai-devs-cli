@@ -15,6 +15,7 @@ const TASKS = [
   'functions',
   'rodo',
   'scraper',
+  'whoami',
 ];
 
 export function buildGetTaskCommand(yargs: Argv) {
