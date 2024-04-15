@@ -8,6 +8,7 @@ import {
   SolveInpromptCommand,
   SolveLiarCommand,
   SolveModerationCommand,
+  SolvePeopleCommand,
   SolveRodoCommand,
   SolveScraperCommand,
   SolveSearchCommand,
@@ -27,6 +28,7 @@ import { rodo } from './rodo/rodo';
 import { scraper } from './scraper/scraper';
 import { whoami } from './whoami/whoami';
 import { search } from './search/search';
+import { people } from './people/people';
 
 export function tasksCommandBuilder(yargs: Argv) {
   return yargs
@@ -83,5 +85,6 @@ export function tasksCommandBuilder(yargs: Argv) {
     .command('rodo', 'solve rodo task', (args) => rodo(args as unknown as SolveRodoCommand))
     .command('scraper', 'solve scraper task', (args) => scraper(args as unknown as SolveScraperCommand))
     .command('whoami', 'solve whoami task', (args) => whoami(args as unknown as SolveWhoamiCommand))
-    .command('search', 'solve search task', (args) => search(args as unknown as SolveSearchCommand));
+    .command('search', 'solve search task', (args) => search(args as unknown as SolveSearchCommand))
+    .command('people', 'solve people task', (args) => people(args as unknown as SolvePeopleCommand));
 }

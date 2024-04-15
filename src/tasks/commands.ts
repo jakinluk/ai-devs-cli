@@ -27,3 +27,4 @@ export interface SolveRodoCommand extends BaseTaskCommand {}
 export interface SolveScraperCommand extends BaseTaskCommand {}
 export interface SolveWhoamiCommand extends BaseTaskCommand {}
 export interface SolveSearchCommand extends BaseTaskCommand {}
+export interface SolvePeopleCommand extends BaseTaskCommand {}

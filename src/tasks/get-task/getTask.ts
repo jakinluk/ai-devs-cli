@@ -17,6 +17,7 @@ const TASKS = [
   'scraper',
   'whoami',
   'search',
+  'people',
 ];
 
 export function buildGetTaskCommand(yargs: Argv) {
