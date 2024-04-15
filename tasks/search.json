@@ -1,0 +1,5 @@
+{
+  "code": 0,
+  "msg": "Index all data from provided URL into vecto store and provide answer to my question - https://unknow.news/archiwum_aidevs.json",
+  "question": "Co różni pseudonimizację od anonimizowania danych?"
+}
