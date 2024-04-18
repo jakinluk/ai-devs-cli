@@ -26,7 +26,7 @@ export class GetTaskHandler {
     const tokenResponse = await this.taskDevClient.getToken({ taskName: input.taskName });
     console.log(chalk.green(`Obtained token \n ${JSON.stringify(tokenResponse, null, 2)}`));
 
-    let task = configstore.get(`${input.taskName}`);
+    let task; // configstore.get(`${input.taskName}`);
     if (!task) {
       task = await this.taskDevClient.getTask({ token: tokenResponse.token });
       configstore.set(`${input.taskName}`, task);

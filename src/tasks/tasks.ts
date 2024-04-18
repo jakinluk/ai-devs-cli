@@ -6,6 +6,7 @@ import {
   SolveFunctionsApiCommand,
   SolveHelloApiCommand,
   SolveInpromptCommand,
+  SolveKnowledgeCommand,
   SolveLiarCommand,
   SolveModerationCommand,
   SolvePeopleCommand,
@@ -29,6 +30,7 @@ import { scraper } from './scraper/scraper';
 import { whoami } from './whoami/whoami';
 import { search } from './search/search';
 import { people } from './people/people';
+import { knowledge } from './knowledge/knowledge';
 
 export function tasksCommandBuilder(yargs: Argv) {
   return yargs
@@ -86,5 +88,6 @@ export function tasksCommandBuilder(yargs: Argv) {
     .command('scraper', 'solve scraper task', (args) => scraper(args as unknown as SolveScraperCommand))
     .command('whoami', 'solve whoami task', (args) => whoami(args as unknown as SolveWhoamiCommand))
     .command('search', 'solve search task', (args) => search(args as unknown as SolveSearchCommand))
-    .command('people', 'solve people task', (args) => people(args as unknown as SolvePeopleCommand));
+    .command('people', 'solve people task', (args) => people(args as unknown as SolvePeopleCommand))
+    .command('knowledge', 'solve knowledge task', (args) => knowledge(args as unknown as SolveKnowledgeCommand));
 }

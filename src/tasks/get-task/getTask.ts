@@ -18,6 +18,7 @@ const TASKS = [
   'whoami',
   'search',
   'people',
+  'knowledge',
 ];
 
 export function buildGetTaskCommand(yargs: Argv) {
