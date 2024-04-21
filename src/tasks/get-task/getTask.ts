@@ -19,6 +19,7 @@ const TASKS = [
   'search',
   'people',
   'knowledge',
+  'tools',
 ];
 
 export function buildGetTaskCommand(yargs: Argv) {

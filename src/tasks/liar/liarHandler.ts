@@ -2,7 +2,7 @@
 /* eslint-disable no-console */
 /* eslint-disable no-use-before-define */
 /* eslint-disable max-classes-per-file */
-import { PromptTemplate } from 'langchain/prompts';
+import { PromptTemplate } from '@langchain/core/prompts';
 import { LLMChain } from 'langchain/chains';
 import { ChatOpenAI } from '@langchain/openai';
 import { SolveLiarCommand } from '../commands';

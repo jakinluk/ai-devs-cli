@@ -6,9 +6,8 @@
 /* eslint-disable no-console */
 /* eslint-disable no-use-before-define */
 /* eslint-disable max-classes-per-file */
-import { ChatPromptTemplate } from 'langchain/prompts';
 import { ChatOpenAI } from '@langchain/openai';
-import { HumanMessage, SystemMessage } from 'langchain/schema';
+import { HumanMessage, SystemMessage } from '@langchain/core/messages';
 import { BaseTaskHandler } from '../../core/handler/baseTaskHandler';
 import { TaskDevClientProvider } from '../../core/clients/taskDevClient';
 import * as config from '../config';

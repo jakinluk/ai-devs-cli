@@ -6,7 +6,7 @@
 /* eslint-disable max-classes-per-file */
 import { TextLoader } from 'langchain/document_loaders/fs/text';
 import { Document } from 'langchain/document';
-import { OpenAIEmbeddings } from 'langchain/embeddings/openai';
+import { OpenAIEmbeddings } from '@langchain/openai';
 import { v4 as uuidv4 } from 'uuid';
 import { QdrantClient } from '@qdrant/js-client-rest';
 import { BaseTaskHandler } from '../../core/handler/baseTaskHandler';

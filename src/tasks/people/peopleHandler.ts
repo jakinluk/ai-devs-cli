@@ -7,15 +7,14 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable max-classes-per-file */
 import { Document } from 'langchain/document';
-import { OpenAIEmbeddings } from 'langchain/embeddings/openai';
+import { OpenAIEmbeddings, ChatOpenAI } from '@langchain/openai';
 import { v4 as uuidv4 } from 'uuid';
 import { QdrantClient } from '@qdrant/js-client-rest';
 import fs from 'fs';
 import path, { dirname } from 'path';
 import stringHash from 'string-hash';
 import { fileURLToPath } from 'url';
-import { ChatPromptTemplate } from 'langchain/prompts';
-import { ChatOpenAI } from '@langchain/openai';
+import { ChatPromptTemplate } from '@langchain/core/prompts';
 import { BaseTaskHandler } from '../../core/handler/baseTaskHandler';
 import { TaskDevClientProvider } from '../../core/clients/taskDevClient';
 import * as config from '../config';

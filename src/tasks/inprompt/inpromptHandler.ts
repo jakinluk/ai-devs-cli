@@ -2,7 +2,7 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable max-classes-per-file */
 import { ChatOpenAI } from '@langchain/openai';
-import { ChatPromptTemplate } from 'langchain/prompts';
+import { ChatPromptTemplate } from '@langchain/core/prompts';
 import { SolveInpromptCommand } from '../commands';
 import * as config from '../config';
 import { TaskDevClientProvider } from '../../core/clients/taskDevClient';

@@ -3,7 +3,7 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable max-classes-per-file */
 import { ChatOpenAI } from '@langchain/openai';
-import { ChatPromptTemplate, MessagesPlaceholder, PromptTemplate } from 'langchain/prompts';
+import { ChatPromptTemplate, MessagesPlaceholder, PromptTemplate } from '@langchain/core/prompts';
 // import { OpenAI } from '@langchain/openai';
 import { BufferWindowMemory } from 'langchain/memory';
 import { ConversationChain } from 'langchain/chains';

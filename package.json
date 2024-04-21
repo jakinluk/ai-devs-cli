@@ -10,7 +10,8 @@
     "solve": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts tasks"
   },
   "dependencies": {
-    "@langchain/openai": "^0.0.25",
+    "@langchain/core": "^0.1.58",
+    "@langchain/openai": "^0.0.28",
     "@qdrant/js-client-rest": "^1.8.2",
     "@types/string-hash": "^1.1.3",
     "axios": "^1.4.0",
@@ -21,7 +22,7 @@
     "inquirer": "^9.2.14",
     "json-diff-ts": "^2.2.1",
     "jsonpath": "^1.1.1",
-    "langchain": "^0.1.28",
+    "langchain": "^0.1.34",
     "loadsh": "^0.0.4",
     "mkdirp": "^3.0.1",
     "node-fetch": "^2.6.11",
