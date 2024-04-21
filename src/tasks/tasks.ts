@@ -13,6 +13,7 @@ import {
   SolveRodoCommand,
   SolveScraperCommand,
   SolveSearchCommand,
+  SolveToolsCommand,
   SolveWhisperCommand,
   SolveWhoamiCommand,
 } from './commands';
@@ -31,6 +32,7 @@ import { whoami } from './whoami/whoami';
 import { search } from './search/search';
 import { people } from './people/people';
 import { knowledge } from './knowledge/knowledge';
+import { tools } from './tools_api/tools';
 
 export function tasksCommandBuilder(yargs: Argv) {
   return yargs
@@ -89,5 +91,6 @@ export function tasksCommandBuilder(yargs: Argv) {
     .command('whoami', 'solve whoami task', (args) => whoami(args as unknown as SolveWhoamiCommand))
     .command('search', 'solve search task', (args) => search(args as unknown as SolveSearchCommand))
     .command('people', 'solve people task', (args) => people(args as unknown as SolvePeopleCommand))
-    .command('knowledge', 'solve knowledge task', (args) => knowledge(args as unknown as SolveKnowledgeCommand));
+    .command('knowledge', 'solve knowledge task', (args) => knowledge(args as unknown as SolveKnowledgeCommand))
+    .command('tools', 'solve tools task', (args) => tools(args as unknown as SolveToolsCommand));
 }

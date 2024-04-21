@@ -1,4 +1,4 @@
-import { BaseMessageChunk } from '@langchain/core';
+import { BaseMessageChunk } from '@langchain/core/messages';
 
 export const parseFunctionCall = (result: BaseMessageChunk): { name: string; args: any } | null => {
   if (result?.additional_kwargs?.function_call === undefined) {
