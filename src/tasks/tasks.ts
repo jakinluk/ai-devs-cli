@@ -4,6 +4,7 @@ import {
   SolveBloggerCommand,
   SolveEmbeddingCommand,
   SolveFunctionsApiCommand,
+  SolveGnomeCommand,
   SolveHelloApiCommand,
   SolveInpromptCommand,
   SolveKnowledgeCommand,
@@ -33,6 +34,7 @@ import { search } from './search/search';
 import { people } from './people/people';
 import { knowledge } from './knowledge/knowledge';
 import { tools } from './tools_api/tools';
+import { gnome } from './gnome/gnome';
 
 export function tasksCommandBuilder(yargs: Argv) {
   return yargs
@@ -92,5 +94,6 @@ export function tasksCommandBuilder(yargs: Argv) {
     .command('search', 'solve search task', (args) => search(args as unknown as SolveSearchCommand))
     .command('people', 'solve people task', (args) => people(args as unknown as SolvePeopleCommand))
     .command('knowledge', 'solve knowledge task', (args) => knowledge(args as unknown as SolveKnowledgeCommand))
-    .command('tools', 'solve tools task', (args) => tools(args as unknown as SolveToolsCommand));
+    .command('tools', 'solve tools task', (args) => tools(args as unknown as SolveToolsCommand))
+    .command('gnome', 'solve gnome task', (args) => gnome(args as unknown as SolveGnomeCommand));
 }

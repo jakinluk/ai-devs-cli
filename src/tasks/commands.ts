@@ -30,3 +30,4 @@ export interface SolveSearchCommand extends BaseTaskCommand {}
 export interface SolvePeopleCommand extends BaseTaskCommand {}
 export interface SolveKnowledgeCommand extends BaseTaskCommand {}
 export interface SolveToolsCommand extends BaseTaskCommand {}
+export interface SolveGnomeCommand extends BaseTaskCommand {}
