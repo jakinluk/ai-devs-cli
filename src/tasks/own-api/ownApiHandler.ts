@@ -6,7 +6,7 @@ import * as config from '../config';
 import { TaskDevClientProvider } from '../../core/clients/taskDevClient';
 import { BaseTaskHandler } from '../../core/handler/baseTaskHandler';
 
-const TASK_NAME = 'ownapi';
+const TASK_NAME = 'ownapipro';
 
 export class SolveOwnAPICommandHandlerProvider {
   async provide(): Promise<SolveOwnApiCommandHandler> {

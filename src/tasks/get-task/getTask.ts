@@ -20,6 +20,8 @@ const TASKS = [
   'people',
   'knowledge',
   'tools',
+  'ownapi',
+  'ownapipro',
 ];
 
 export function buildGetTaskCommand(yargs: Argv) {
