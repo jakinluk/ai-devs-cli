@@ -22,6 +22,7 @@ const TASKS = [
   'tools',
   'ownapi',
   'ownapipro',
+  'meme',
 ];
 
 export function buildGetTaskCommand(yargs: Argv) {

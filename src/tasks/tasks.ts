@@ -9,6 +9,7 @@ import {
   SolveInpromptCommand,
   SolveKnowledgeCommand,
   SolveLiarCommand,
+  SolveMemeCommand,
   SolveModerationCommand,
   SolveOwnAPICommand,
   SolvePeopleCommand,
@@ -37,6 +38,7 @@ import { knowledge } from './knowledge/knowledge';
 import { tools } from './tools_api/tools';
 import { gnome } from './gnome/gnome';
 import { buildSolveOwnAPIApiCommand, ownApi } from './own-api/ownApi';
+import { meme } from './meme/meme';
 
 export function tasksCommandBuilder(yargs: Argv) {
   return yargs
@@ -96,6 +98,7 @@ export function tasksCommandBuilder(yargs: Argv) {
     .command('search', 'solve search task', (args) => search(args as unknown as SolveSearchCommand))
     .command('people', 'solve people task', (args) => people(args as unknown as SolvePeopleCommand))
     .command('knowledge', 'solve knowledge task', (args) => knowledge(args as unknown as SolveKnowledgeCommand))
+    .command('meme', 'solve knowledge task', (args) => meme(args as unknown as SolveMemeCommand))
     .command('tools', 'solve tools task', (args) => tools(args as unknown as SolveToolsCommand))
     .command('gnome', 'solve gnome task', (args) => gnome(args as unknown as SolveGnomeCommand))
     .command(
