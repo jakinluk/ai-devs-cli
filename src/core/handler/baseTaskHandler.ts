@@ -31,6 +31,11 @@ export abstract class BaseTaskHandler<C extends BaseTaskCommand, T extends Task,
     return (await this.taskDevClient.getTask({ token: tokenResponse.token })) as T;
   }
 
+  protected async refreshToken(): Promise<void> {
+    const tokenResponse = await this.taskDevClient.getToken({ taskName: this.taskName });
+    this.activeToken = tokenResponse.token;
+  }
+
   private async putAnswer(answer: A): Promise<SubmitAnswerResponse> {
     return this.taskDevClient.submitAnswer({ answer, token: this.activeToken });
   }

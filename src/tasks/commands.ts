@@ -35,3 +35,4 @@ export interface SolveMemeCommand extends BaseTaskCommand {}
 export interface SolveOwnAPICommand extends BaseTaskCommand {
   apiURL: string;
 }
+export interface SolveOptimalDbCommand extends BaseTaskCommand {}

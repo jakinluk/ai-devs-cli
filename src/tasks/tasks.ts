@@ -11,6 +11,7 @@ import {
   SolveLiarCommand,
   SolveMemeCommand,
   SolveModerationCommand,
+  SolveOptimalDbCommand,
   SolveOwnAPICommand,
   SolvePeopleCommand,
   SolveRodoCommand,
@@ -39,6 +40,7 @@ import { tools } from './tools_api/tools';
 import { gnome } from './gnome/gnome';
 import { buildSolveOwnAPIApiCommand, ownApi } from './own-api/ownApi';
 import { meme } from './meme/meme';
+import { optimaldb } from './optimaldb/optimaldb';
 
 export function tasksCommandBuilder(yargs: Argv) {
   return yargs
@@ -101,6 +103,7 @@ export function tasksCommandBuilder(yargs: Argv) {
     .command('meme', 'solve knowledge task', (args) => meme(args as unknown as SolveMemeCommand))
     .command('tools', 'solve tools task', (args) => tools(args as unknown as SolveToolsCommand))
     .command('gnome', 'solve gnome task', (args) => gnome(args as unknown as SolveGnomeCommand))
+    .command('optimaldb', 'solve optimaldb task', (args) => optimaldb(args as unknown as SolveOptimalDbCommand))
     .command(
       'ownapi',
       'own api task',
