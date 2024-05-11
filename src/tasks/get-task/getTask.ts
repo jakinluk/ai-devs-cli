@@ -24,6 +24,7 @@ const TASKS = [
   'ownapipro',
   'meme',
   'google',
+  'md2html',
 ];
 
 export function buildGetTaskCommand(yargs: Argv) {

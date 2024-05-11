@@ -9,6 +9,7 @@ import {
   SolveInpromptCommand,
   SolveKnowledgeCommand,
   SolveLiarCommand,
+  SolveMdm2HtmlCommand,
   SolveMemeCommand,
   SolveModerationCommand,
   SolveOptimalDbCommand,
@@ -41,6 +42,7 @@ import { gnome } from './gnome/gnome';
 import { buildSolveOwnAPIApiCommand, ownApi } from './own-api/ownApi';
 import { meme } from './meme/meme';
 import { optimaldb } from './optimaldb/optimaldb';
+import { buildSolveMd2HtmlCommand, md2Html } from './md2html/md2html';
 
 export function tasksCommandBuilder(yargs: Argv) {
   return yargs
@@ -109,5 +111,11 @@ export function tasksCommandBuilder(yargs: Argv) {
       'own api task',
       (yargs) => buildSolveOwnAPIApiCommand(yargs),
       (args) => ownApi(args as Partial<SolveOwnAPICommand>)
+    )
+    .command(
+      'md2html',
+      'md2html task',
+      (yargs) => buildSolveMd2HtmlCommand(yargs),
+      (args) => md2Html(args as unknown as Partial<SolveMdm2HtmlCommand>)
     );
 }

@@ -36,3 +36,4 @@ export interface SolveOwnAPICommand extends BaseTaskCommand {
   apiURL: string;
 }
 export interface SolveOptimalDbCommand extends BaseTaskCommand {}
+export interface SolveMdm2HtmlCommand extends BaseTaskCommand {}

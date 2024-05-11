@@ -45,6 +45,9 @@ rules:
       ignore:
         - "aws-lambda"
   import/prefer-default-export: "off"
+  max-classes-per-file: "off"
+  # disable no-use-before-define
+  no-use-before-define: "off"
   
 env:
   node: true

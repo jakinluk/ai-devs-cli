@@ -1,0 +1,6 @@
+{
+  "code": 0,
+  "msg": "Convert this Markdown text into HTML - rememeber about strange BOLD interpretation!",
+  "hint": "https://tasks.aidevs.pl/hint/md2html",
+  "input": "## Dlaczego warto częstować gości **Yerba Mate**?\n1. Sprawiasz wrażenie bogatego światowca\n2. _Oszczędzasz na cukrze_\n3. Nie poproszą o dolewkę\n4. Jest szansa, że **już Cię więcej nie odwiedzą**"
+}
